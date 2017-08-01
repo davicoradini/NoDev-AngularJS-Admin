@@ -5,6 +5,7 @@ angular.module('noDev.protected.creator', [])
             $stateProvider.state('protected.creator', {
                 url: '/creator',
                 templateUrl: 'protected/creator/creator.tpl.html',
+                controller: 'AppCtrl as AppCtrl',
                 data: {
                     pageTitle: 'Creator'
                 }

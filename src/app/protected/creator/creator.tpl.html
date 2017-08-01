@@ -1,5 +1,49 @@
-<div class="creator" flex>
+<div layout="row" class="creator" ng-cloak>
 
+    <md-content flex layout-padding>
 
+        <div layout="column" layout-align="top center">
+            <div>
+                <md-button ng-click="toggleRight()"
+                           ng-hide="isOpenRight()"
+                           class="md-primary">
+                    Toggle right
+                </md-button>
+            </div>
+        </div>
+
+        <div flex></div>
+
+    </md-content>
+
+    <md-sidenav id="right-sidenav" class="md-sidenav-right md-whiteframe-4dp" md-component-id="right"
+                md-is-locked-open="isRightNavLockedOpen">
+
+        <md-tabs class="md-accent" md-selected="data.selectedIndex">
+            <md-button class="md-icon-button" ng-click="isRightNavLockedOpen=!isRightNavLockedOpen">
+                <md-icon md-font-icon="material-icons" aria-label="Pin right nav">lock</md-icon>
+            </md-button>
+
+            <md-button class="md-icon-button" ng-click="toggleRight()">
+                <md-icon md-font-icon="material-icons" aria-label="Close right nav">close</md-icon>
+            </md-button>
+
+            <md-tab id="tab1">
+                <md-tab-label>Item One</md-tab-label>
+                <md-tab-body>
+                    View for Item #1 <br/>
+                    data.selectedIndex = 0;
+                </md-tab-body>
+            </md-tab>
+            <md-tab id="tab5">
+                <md-tab-label>Item Two</md-tab-label>
+                <md-tab-body>
+                    View for Item #5 <br/>
+                    data.selectedIndex = 4;
+                </md-tab-body>
+            </md-tab>
+        </md-tabs>
+
+    </md-sidenav>
 
 </div>
