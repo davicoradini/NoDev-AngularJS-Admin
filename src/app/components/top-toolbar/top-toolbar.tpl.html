@@ -1,0 +1,46 @@
+<div layout="row" layout-align="start center" class="top-toolbar">
+    <div layout="row" layout-align="start center" class="left">
+        <md-button class="md-fab md-mini md-hue-1 md-raised"
+                   ng-click="$root.toggleMenu()" ng-disabled="$mdMedia('gt-sm')">
+            <md-icon md-font-icon="material-icons" aria-label="Tootle Menu">view_headline</md-icon>
+        </md-button>
+
+        <div class="top-logo">
+            <img src="assets/images/logo_white.png" alt="Logo">
+        </div>
+    </div>
+
+    <div layout="row" layout-align="start center" class="search" flex>
+        <div>
+            <md-button class="md-icon-button">
+                <md-icon md-font-icon="material-icons" aria-label="Open search">
+                    search
+                </md-icon>
+                <md-tooltip>Open Search</md-tooltip>
+            </md-button>
+        </div>
+        <div flex="33">
+            <md-autocomplete flex
+                             md-input-name="autocompleteField"
+                             md-no-cache="protectedCtrl.noCache"
+                             md-selected-item="protectedCtrl.selectedItem"
+                             md-search-text-change="protectedCtrl.searchTextChange(protectedCtrl.searchText)"
+                             md-search-text="protectedCtrl.searchText"
+                             md-selected-item-change="protectedCtrl.selectedItemChange(item)"
+                             md-items="item in protectedCtrl.querySearch(protectedCtrl.searchText)"
+                             md-item-text="item.display"
+                             md-require-match
+                             md-min-length="0"
+                             placeholder="Find anything">
+
+                <md-item-template>
+                    <span md-highlight-text="protectedCtrl.searchText" md-highlight-flags="^i">{{item.display}}</span>
+                </md-item-template>
+                <md-not-found>
+                    No states matching "{{protectedCtrl.searchText}}" were found.
+                    <a ng-click="protectedCtrl.newState(protectedCtrl.searchText)">Create a new one!</a>
+                </md-not-found>
+            </md-autocomplete>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,28 @@
+{
+  "name": "nodev-angularjs",
+  "version": "2.0.0",
+  "devDependencies": {
+    "angular": "~1.6.0",
+    "angular-mocks": "~1.6.0"
+  },
+  "dependencies": {
+    "angular-animate": "~1.6.0",
+    "angular-aria": "~1.6.0",
+    "angular-cookies": "~1.6.0",
+    "angular-i18n": "~1.6.0",
+    "angular-loading-bar": "~0.9.0",
+    "angular-material": "~1.1.0",
+    "angular-messages": "~1.6.0",
+    "angular-resource": "~1.6.0",
+    "angular-ui-router": "~0.3.0",
+    "angular-input-masks": "^2.5.0",
+    "angular-filter": "~0.5.15",
+    "angular-br-filters": "~0.7.0",
+    "angular-material-data-table": "~0.10.10",
+    "angular-scroll": "~1.0.0",
+    "ngAutocomplete": "~1.0.0"
+  },
+  "resolutions": {
+    "angular": "~1.6.0"
+  }
+}

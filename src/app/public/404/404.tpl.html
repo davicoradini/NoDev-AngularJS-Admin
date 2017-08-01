@@ -1,0 +1,24 @@
+<div flex="" layout="row" style="text-align: center;margin-top: 20%;">
+    <div flex layout="column">
+        <md-content flex="" class="main-content ng-scope _md md-default-theme flex" ui-view="">
+            <div class="content ng-scope">
+                <div class="logo">
+                    <a href="/" class="md-default-theme">
+                        <img src="/assets/images/logo_black.png" title="INside" style="width: 200px">
+                    </a>
+                </div>
+
+                <div ui-view="" class="ng-scope"><h1 class="md-headline ng-scope">Ops! Houve um erro</h1>
+                    <pre>404 - NOT FOUND</pre>
+                </div>
+
+                <p class="go-to-home">
+                    <a href="/" class="md-default-theme">Clique aqui</a> para ir até a página inicial
+                </p>
+                <p>
+                    ou <a href="" ng-click="$root.logout()" class="md-default-theme">Fazer Logoff</a>
+                </p>
+            </div>
+        </md-content>
+    </div>
+</div>
