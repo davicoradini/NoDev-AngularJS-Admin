@@ -1,5 +1,5 @@
 angular.module('noDev.protected', [
-    'noDev.protected.home'
+    'noDev.protected.creator'
 ])
 
     .config(['$stateProvider',

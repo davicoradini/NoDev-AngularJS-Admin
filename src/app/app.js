@@ -15,16 +15,17 @@ var application = angular.module(
         'ngAutocomplete',
         'noDev.filters',
         'noDev.services.auth',
-        'noDev.services.configuration',
         'noDev.protected',
         'noDev.public'
     ])
 
     .config(['$urlRouterProvider', 'cfpLoadingBarProvider', '$mdThemingProvider', '$httpProvider', '$locationProvider',
-        function ($urlRouterProvider, cfpLoadingBarProvider, $mdThemingProvider, $httpProvider, $locationProvider) {
+        'configurationProvider',
+        function ($urlRouterProvider, cfpLoadingBarProvider, $mdThemingProvider, $httpProvider, $locationProvider,
+                  configurationProvider) {
 
-            $urlRouterProvider.otherwise('/');
-            $locationProvider.html5Mode(true);
+            $urlRouterProvider.otherwise('/creator');
+            $locationProvider.html5Mode(configurationProvider.$get().html5Mode);
             $httpProvider.interceptors.push('AuthInterceptor');
             cfpLoadingBarProvider.includeSpinner = false;
 

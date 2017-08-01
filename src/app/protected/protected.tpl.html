@@ -1,14 +1,2 @@
-<div flex layout="column" class="protected">
-    <md-toolbar md-whiteframe="2">
-        <ng-include src="'components/top-toolbar/top-toolbar.tpl.html'"></ng-include>
-    </md-toolbar>
-
-    <div flex layout="row">
-        <md-sidenav md-component-id="sidenav-left" class="md-sidenav-left"
-                    md-whiteframe="2" md-is-locked-open="$mdMedia('gt-sm')">
-            <ng-include src="'components/left-sidenav/left-sidenav.tpl.html'"></ng-include>
-        </md-sidenav>
-
-        <md-content layout="row" class="main-content" flex ui-view du-scroll-container></md-content>
-    </div>
+<div class="protected" flex ui-view du-scroll-container>
 </div>
